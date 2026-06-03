@@ -18,7 +18,7 @@ if "surpresa" not in st.session_state:
 
 
 #-------------- Função Base ----------------
-def image_to_base54(path):
+def image_to_base64(path):
     with open(path, "rb") as f:
         return base64.b64encode(f.read()).decode()
 
