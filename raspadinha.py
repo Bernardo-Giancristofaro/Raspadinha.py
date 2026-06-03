@@ -125,26 +125,23 @@ function verificarProgresso() {{
 
     if (porcentagem > 0.80) {{
 
-        surpresaLiberada = true;
+    surpresaLiberada = true;
 
-        // Mostra botão direto na tela
-        const botao = document.createElement("button");
+    const botao = document.createElement("button");
 
-        botao.innerText = "✨ Clique para ver sua surpresa ❤️";
-        botao.style.padding = "12px 20px";
-        botao.style.fontSize = "16px";
-        botao.style.marginTop = "20px";
-        botao.style.borderRadius = "10px";
-        botao.style.cursor = "pointer";
+    botao.innerText = "✨ Clique para ver sua surpresa ❤️";
+    botao.style.padding = "12px 20px";
+    botao.style.fontSize = "16px";
+    botao.style.marginTop = "20px";
+    botao.style.borderRadius = "10px";
+    botao.style.cursor = "pointer";
 
-        botao.onclick = () => {{
-            window.location.href = "?ir_surpresa=1";
-        }};
+    botao.onclick = () => {{
+        window.location.href = "https://diadosnamorados.streamlit.app";
+    }};
 
-        document.body.appendChild(botao);
-    }}
+    document.body.appendChild(botao);
 }}
-
 
 function raspar(e) {{
 
@@ -183,16 +180,3 @@ st.components.v1.html(html_code, height=500)
 
 
 #---------------- Redirecionamento Final --------------------
-query_params = st.query_params
-
-if query_params.get("ir_surpresa") == "1":
-
-    st.balloons()
-
-    st.success("Surpresa liberada ❤️")
-    st.balloons()
-    st.link_button(
-    "❤️ Abrir surpresa ❤️",
-    "https://diadosnamorados.streamlit.app",
-    use_container_width=True
-)
