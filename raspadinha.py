@@ -60,13 +60,31 @@ let surpresaLiberada = false;
 foto.src = "data:image/jpeg;base64,{foto}";
 cover.src = "data:image/jpeg;base64,{cover}";
 
-foto.onload = () => {{
-    ctx.drawImage(foto, 0, 0, canvas.width, canvas.height);
+foto.onload = () => {
 
-    cover.onload = () => {{
-        ctx.drawImage(cover, 0, 0, canvas.width, canvas.height);
-    }}
-}}
+    console.log("Foto carregada");
+
+    cover.onload = () => {
+
+        console.log("Cover carregado");
+
+        ctx.drawImage(
+            foto,
+            0,
+            0,
+            canvas.width,
+            canvas.height
+        );
+
+        ctx.drawImage(
+            cover,
+            0,
+            0,
+            canvas.width,
+            canvas.height
+        );
+    };
+};
 
 
 function getPos(e) {{
