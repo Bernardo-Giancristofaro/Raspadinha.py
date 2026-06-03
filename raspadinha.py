@@ -24,7 +24,7 @@ def image_to_base64(path):
 
 
 foto = image_to_base64("foto_praia_01.jpg")       # imagem secreta
-cover = image_to_base64("foto_praia_00.JPG")     # camada da raspadinha
+cover = image_to_base64("cover.JPG")     # camada da raspadinha
 
 
 # ---------------- HTML + JS DA RASPADINHA ----------------
@@ -174,7 +174,7 @@ if query_params.get("ir_surpresa") == "1":
     st.success("Surpresa liberada ❤️")
     st.balloons()
     st.link_button(
-    "❤️ Abrir minha surpresa ❤️",
+    "❤️ Abrir surpresa ❤️",
     "https://diadosnamorados.streamlit.app",
     use_container_width=True
 )
