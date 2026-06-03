@@ -173,5 +173,11 @@ if query_params.get("ir_surpresa") == "1":
 
     st.success("Surpresa liberada ❤️")
 
-    if st.button("Entrar no presente ❤️"):
-        st.switch_page("pages/diadosnamorados")
+    
+st.balloons()
+
+st.link_button(
+    "❤️ Abrir minha surpresa ❤️",
+    "https://diadosnamorados.streamlit.app",
+    use_container_width=True
+)
