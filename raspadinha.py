@@ -56,7 +56,7 @@ let raspando = false;
 let surpresaLiberada = false;
 
 foto.src = "data:image/jpeg;base64,{foto}";
-cover.src = "data:image/png;base64,{cover}";
+cover.src = "data:image/jpeg;base64,{cover}";
 
 foto.onload = () => {{
     ctx.drawImage(foto, 0, 0, canvas.width, canvas.height);
