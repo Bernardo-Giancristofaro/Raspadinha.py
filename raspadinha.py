@@ -137,10 +137,12 @@ function verificarProgresso() {{
     botao.style.cursor = "pointer";
 
     botao.onclick = () => {{
-        window.location.href = "https://diadosnamorados.streamlit.app";
+        window.location.href = 'https://diadosnamorados.streamlit.app';
     }};
 
     document.body.appendChild(botao);
+}}
+
 }}
 
 function raspar(e) {{
