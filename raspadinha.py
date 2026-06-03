@@ -24,7 +24,7 @@ def image_to_base64(path):
 
 
 foto = image_to_base64("foto_praia_01.jpg")       # imagem secreta
-cover = image_to_base64("foto_praia_00.jgp")     # camada da raspadinha
+cover = image_to_base64("foto_praia_00.jpg")     # camada da raspadinha
 
 
 # ---------------- HTML + JS DA RASPADINHA ----------------
