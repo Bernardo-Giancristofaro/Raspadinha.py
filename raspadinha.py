@@ -26,8 +26,6 @@ def image_to_base64(path):
 foto = image_to_base64("foto_praia_01.jpg")       # imagem secreta
 cover = image_to_base64("cover.JPG")     # camada da raspadinha
 
-st.image("cover.JPG", caption="Imagem Cover")
-st.image("foto_praia_01.jpg", caption="Imagem Secreta")
 
 # ---------------- HTML + JS DA RASPADINHA ----------------
 html_code = f"""
@@ -57,19 +55,34 @@ const cover = new Image();
 let raspando = false;
 let surpresaLiberada = false;
 
-cover.src = "data:image/jpeg;base64,{cover}";
+foto.onload = () => {{
 
-cover.onload = () => {{
-    ctx.drawImage(
-        cover,
-        0,
-        0,
-        canvas.width,
-        canvas.height
-    );
-}}
+    cover.onload = () => {{
 
-cover.src = "data:image/jpeg;base64,{cover}";
+        // desenha a foto secreta primeiro
+        ctx.drawImage(
+            foto,
+            0,
+            0,
+            canvas.width,
+            canvas.height
+        );
+
+        // desenha a cobertura por cima
+        ctx.drawImage(
+            cover,
+            0,
+            0,
+            canvas.width,
+            canvas.height
+        );
+
+    }};
+
+    cover.src = "data:image/jpeg;base64,{cover}";
+}};
+
+foto.src = "data:image/jpeg;base64,{foto}";
 
 
 function getPos(e) {{
